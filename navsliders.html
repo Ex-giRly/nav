@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #C8A2C8;
+            margin: 39px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #9575CD;
+            padding: 3px;
+            border-radius: 10px;
+        }
+
+        .topnav a {
+            float: left;
+            color: #4b0082;
+            text-align: center;
+            padding: 14px 20px;
+        }
+
+        .topnav a:hover {
+            background-color: #dcd0ff;
+            color:#9955bb ;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#">About</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </div>
+       
+    <section>
+        <img class="mySlides" src="images.jpeg" alt="Katseye Logo" style="height: 400px; width: 400px; border-radius: 20px; margin-right: 100px;">
+        <img class="mySlides" src="1755866411-screenshot-2025-08-22-at-8-39-45-am-68a8651851a58.avif" alt="Katseye Logo"
+            style="height: 400px; width: 400px; border-radius: 20px; margin-right: 100px;">
+        <img class="mySlides" src="download (1).jpeg" alt="Katseye Logo" style="height: 400px; width: 400px; border-radius: 20px; margin-right: 100px;">
+        <img class="mySlides" src="download (2).jpeg" alt="Katseye Logo" style="height: 400px; width: 400px; border-radius: 20px; margin-right: 100px;">
+        <img class="mySlides" src="download (3).jpeg" alt="Katseye Logo" style="height: 400px; width: 400px; border-radius: 20px; margin-right: 100px;">
+        <img class="mySlides" src="download (7).jpeg" alt="Katseye Logo" style="height: 400px; width: 400px; border-radius: 20px; margin-right: 100px;">
+        <img class="mySlides" src="download.jpeg" alt="Katseye Logo" style="height: 400px; width: 400px; border-radius: 20px; margin-right: 100px;">
+    </section>
+        <div id="footer">
+            <p>© 2024 Katseye. this is for my coding class and i chose to write about Katseye . No rights reserved.</p>
+            <p>email us: info@katseye.com</p>
+            <p>follow us on instagram: @katseye</p>
+            <p>phone number: (925) 528-7393</p>
+        </div>
+
+    <script>
+        // Automatic Slideshow//
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3000);
+            
+        }
+    </script>
+</body>
+</html>
